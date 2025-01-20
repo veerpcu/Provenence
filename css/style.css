@@ -1,255 +1,170 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
+body {
+  background-color: black;
+  color: white;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 100;
+  box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-p {
-  color: steelblue;
-}
-
-.colored {
-  color:hotpink;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
+.nav-links a {
+  color: blue;
+  text-decoration: underline;
   white-space: nowrap;
-  width: 1px;
-  /* 1 */
+  margin: 0 10px;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+.nav-links a:hover {
+  text-decoration: none;
+}
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
+.header {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 3.8rem;
+  text-align: center;
+  line-height: 1;
+  transform: scaleY(2.1);
+  margin-top: 13vh;
+  position: relative;
+}
+
+.selected-works-header {
+  transform: translateY(-7px);
+}
+
+.sub-header {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  color: ghostwhite;
+  text-align: right;
+  transform: scaleY(1.2);
+  margin-top: 1px;
+  font-weight: normal;
+  position: absolute;
+  right: 33%;
+}
+
+.bio {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 150px auto 0 auto;
+  max-width: 50%;
+  padding: 30px 0;
+  color: white;
+}
+
+.image-container {
+  position: relative;
+}
+
+.popup-wrapper {
+  position: absolute;
+  width: 235px;
+}
+
+.popup-wrapper.left {
+  left: 20px;
+  top: 0;
+}
+
+.popup-wrapper.right {
+  right: 20px;
+  top: 0;
+}
+
+.popup-image {
+  width: 100%;
+}
+
+.close-link {
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: blue;
+  text-decoration: underline;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+.vara1-container {
+  position: relative;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.vara1-image {
+  width: 100%;
   height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+.vara1-header {
+  font-family: Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -7px;
+  transform: scaleX(3);
+  text-align: center;
+  margin-top: 50px;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+.vara1-description {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+  max-width: 80%;
+  margin: 20px auto 50px auto;
+  line-height: 1.6;
 }
 
-.clearfix::after {
-  clear: both;
+.log1-container {
+  position: relative;
+  width: 100%;
+  margin-top: 300px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.log1-image {
+  width: 100%;
+  height: auto;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.log1-header {
+  font-family: Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  transform: scaleX(3);
+  text-align: center;
+  margin-top: 50px;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+.log1-description {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+  max-width: 80%;
+  margin: 20px auto 50px auto;
+  line-height: 1.6;
 }
-
